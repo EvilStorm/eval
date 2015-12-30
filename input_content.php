@@ -50,9 +50,9 @@ Image3 : </br>
 	}
 
 	$query = "insert into contents(title, content, angel, create_date) values ('$title', '$content', $type, $create_date);";
-	mysql_query($query)  or die(queryFail(444));
+	$result = mysql_query($query)  or die(queryFail(444));
 	
-	syslog(LOG_NOTICE, " Query : " . $query);
+	syslog(LOG_NOTICE, " Query : " . $query . "   RESULT " . $result);
 	
 	$query = "select id from contents where create_date = $create_date;";
 	$query_result = mysql_query($query)  or die(insertFail(701));
@@ -63,7 +63,8 @@ Image3 : </br>
 		}
 	}
 
-	
+	syslog(LOG_NOTICE, " Insert index : " . $content_index);
+
 	mysql_query("START TRANSACTION");
 	if($content_index != 0){
 		if($img1 != null){
