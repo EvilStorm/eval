@@ -9,9 +9,9 @@
   	$conn = mysql_connect($db_host, $db_user, $db_password);
 
 	if($conn){
-		echo " DB CONNECT 성공 " ;
+		echo " DB CONNECT SUCCESS " ;
 	}else{
-		echo " DB CONNECT : 실패 ";
+		echo " DB CONNECT FAIL ";
 	}
 
 
