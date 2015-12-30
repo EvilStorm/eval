@@ -9,12 +9,24 @@
   	$conn = mysql_connect($db_host, $db_user, $db_password);
 	$result = mysql_select_db($db_name, $conn);
 
+	serverip();
 	agreement();
 	notice();
 	version();
 	contents();
 	comments();
 	images();
+
+	function serverip(){
+		$query = "create table serverip( ";
+		$query = $query . "ip varchar(15));";
+		echo $query . NL;
+		mysql_query($query);
+
+		$query = 'insert into serverip (ip) values (52.192.108.250)';
+		mysql_query($query);
+	}
+
 
 	function agreement(){
 		$query = "create table agreement( ";
