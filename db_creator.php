@@ -4,7 +4,7 @@
   	$db_host = "localhost";
   	$db_name = "evaluation";
   	$db_user = "root";
-  	$db_password = "serVice1!!";
+  	$db_password = "serVice1!";
   	
   	$conn = mysql_connect($db_host, $db_user, $db_password);
 
