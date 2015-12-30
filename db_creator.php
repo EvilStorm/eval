@@ -22,9 +22,6 @@
 		$query = $query . "ip varchar(15));";
 		echo $query . NL;
 		mysql_query($query);
-
-		$query = 'insert into serverip (ip) values (52.192.108.250)';
-		mysql_query($query);
 	}
 
 
