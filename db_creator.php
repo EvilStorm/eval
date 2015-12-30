@@ -7,8 +7,13 @@
   	$db_password = "serVice1!!";
   	
   	$conn = mysql_connect($db_host, $db_user, $db_password);
+
+	echo " CONNECT : " . $conn;
+
 	$result = mysql_select_db($db_name, $conn);
-	
+
+	echo " CONNECT RESULT : " . $result;
+
 agreement();
 notice();
 version();
