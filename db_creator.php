@@ -7,22 +7,14 @@
   	$db_password = "serVice1!";
   	
   	$conn = mysql_connect($db_host, $db_user, $db_password);
-
-	if($conn){
-		echo " DB CONNECT SUCCESS " ;
-	}else{
-		echo " DB CONNECT FAIL ";
-	}
-
-
 	$result = mysql_select_db($db_name, $conn);
 
-agreement();
-notice();
-version();
-contents();
-comments();
-images();
+	agreement();
+	notice();
+	version();
+	contents();
+	comments();
+	images();
 
 	function agreement(){
 		$query = "create table agreement( ";
